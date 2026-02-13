@@ -42,7 +42,7 @@ Include the package in your system packages:
 ```nix
 { pkgs, inputs, ... }: {
   environment.systemPackages = [
-    inputs.lunar-client.packages.${pkgs.system}.default
+    inputs.lunar-client.packages.${pkgs.stdenv.hostPlatform.system}.default
   ];
 }
 ```
