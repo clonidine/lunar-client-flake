@@ -27,7 +27,20 @@ jobs:
       - name: Check for changes
         id: git-check
         run: |
-          git diff --exit-code || echo "changes=true" >> $GITHUB_OUTPUT
+          echo "=== git status ==="
+          git status --porcelain=v1 || true
+          echo
+
+          if git diff --quiet; then
+            echo "changes=false" >> "$GITHUB_OUTPUT"
+            echo "No updates found. Nothing to commit."
+          else
+            echo "changes=true" >> "$GITHUB_OUTPUT"
+            echo "Updates found. Will commit and push."
+            echo
+            echo "=== diff stat ==="
+            git diff --stat
+          fi
 
       - name: Commit and Push changes
         if: steps.git-check.outputs.changes == 'true'
