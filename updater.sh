@@ -27,7 +27,7 @@ echo "📦 URL: $ENCODED_URL"
 # 3. Calculate Hash
 echo "⬇️  Calculating Hash..."
 NEW_HASH=$(nix-prefetch-url --name "$SANITIZED_NAME" "$ENCODED_URL")
-SRI_HASH=$(nix hash convert --hash-algo sha256 --to sri "$NEW_HASH")
+SRI_HASH=$(nix hash to-sri --type sha256 "$NEW_HASH")
 
 echo "🔒 Hash: $SRI_HASH"
 
