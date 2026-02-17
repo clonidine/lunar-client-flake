@@ -59,6 +59,9 @@
           substituteInPlace $out/share/applications/lunar-client.desktop \
             --replace 'Exec=AppRun' 'Exec=${pname}' \
             --replace 'Icon=lunarclient' 'Icon=lunar-client'
+            
+          # Fix the Dock icon association
+          echo "StartupWMClass=lunarclient" >> $out/share/applications/lunar-client.desktop
         '';
       };
 
