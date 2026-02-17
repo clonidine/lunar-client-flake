@@ -79,7 +79,7 @@ Ensure you have installed the flake via `environment.systemPackages`. The flake 
 
 ### Generic Icon when Game is Running
 
-While the launcher icon is fixed, the game window (e.g., Lunar Client 1.7.10 or 1.21) may still show a generic "gear" icon in the dock. This is due to Java dynamically changing the window's wmclass based on the version launched. The launcher itself is correctly mapped using StartupWMClass.
+While the launcher icon is fixed, the **game window** (e.g., Lunar Client 1.7.10 or 1.21) may still show a generic "gear" icon in the dock. This is due to Java dynamically changing the window's `wmclass` based on the version launched. The launcher itself is correctly mapped using `StartupWMClass`.
 
 ### Graphics/Drivers
 
