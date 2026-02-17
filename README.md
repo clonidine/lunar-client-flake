@@ -77,6 +77,10 @@ If you want to update the flake manually:
 
 Ensure you have installed the flake via `environment.systemPackages`. The flake installs the `.desktop` file to `share/applications` and the icon to `share/icons/hicolor`. You may need to restart your session or refresh your app launcher for changes to take effect.
 
+### Generic Icon when Game is Running
+
+While the launcher icon is fixed, the game window (e.g., Lunar Client 1.7.10 or 1.21) may still show a generic "gear" icon in the dock. This is due to Java dynamically changing the window's wmclass based on the version launched. The launcher itself is correctly mapped using StartupWMClass.
+
 ### Graphics/Drivers
 
 If the client opens to a black screen, ensure your graphics drivers are correctly configured:
