@@ -12,13 +12,13 @@
       pkgs = nixpkgs.legacyPackages.${system};
 
       pname = "lunar-client";
-      version = "3.7.21";
+      version = "3.7.23";
 
       src = pkgs.fetchurl {
         # LUNAR_URL
-        url = "https://launcher-releases.lunarclientprod.com/master/6e18b5a4f4ebbd4c7ecff572f1700cedce1f248bcb157adce5ec49be9e081a23/Lunar%20Client-3.7.21-ow.AppImage"; # LUNAR_URL
+        url = "https://launcher-releases.lunarclientprod.com/master/6e18b5a4f4ebbd4c7ecff572f1700cedce1f248bcb157adce5ec49be9e081a23/Lunar%20Client-3.7.23-ow.AppImage"; # LUNAR_URL
         name = "lunar-client-${version}.AppImage";
-        sha256 = "sha256-S5V99TGVss54Qc4SyZrnBU06MIeGc/WZ3Dl4zc1O61Q="; # LUNAR_HASH
+        sha256 = "sha256-bNS/bTytdeA5dTiX/Nx7MJQ7rlrxVnOH/ieqMwmk/74="; # LUNAR_HASH
       };
 
       # 1. Extract the AppImage contents to retrieve the icon and .desktop file
